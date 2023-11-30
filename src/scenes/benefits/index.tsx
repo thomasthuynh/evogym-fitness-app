@@ -43,7 +43,7 @@ const container = {
   },
 };
 
-const index = ({ setSelectedPage }: Props) => {
+const Benefits = ({ setSelectedPage }: Props) => {
   return (
     <section id="benefits" className="mx-auto min-h-full w-5/6 py-20">
       <motion.div
@@ -151,7 +151,7 @@ const index = ({ setSelectedPage }: Props) => {
             <div className="relative mt-16">
               <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
                 <ActionButton
-                  setSelectedPage={setSelectedPage(SelectedPage.ContactUs)}
+                  setSelectedPage={setSelectedPage}
                 >
                   Join Now
                 </ActionButton>
@@ -164,4 +164,4 @@ const index = ({ setSelectedPage }: Props) => {
   );
 };
 
-export default index;
+export default Benefits;

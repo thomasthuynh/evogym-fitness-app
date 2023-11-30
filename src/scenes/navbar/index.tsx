@@ -12,7 +12,7 @@ type Props = {
   isTopOfPage: boolean;
 };
 
-const index = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
+const Navbar = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
   const flexBetween = "flex items-center justify-between";
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const navbarBackground = isTopOfPage ? "" : "bg-primary-100 drop-shadow";
@@ -57,7 +57,7 @@ const index = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
 
                 <div className={`${flexBetween} gap-8`}>
                   <p>Sign In</p>
-                  <ActionButton>Become a Member</ActionButton>
+                  <ActionButton setSelectedPage={setSelectedPage}>Become a Member</ActionButton>
                 </div>
               </div>
             ) : (
@@ -111,4 +111,4 @@ const index = ({ selectedPage, setSelectedPage, isTopOfPage }: Props) => {
   );
 };
 
-export default index;
+export default Navbar;
